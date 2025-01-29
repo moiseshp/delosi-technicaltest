@@ -4,10 +4,12 @@ import { MatrixGrid } from '@/components/ui/matrix-grid';
 export default function Home() {
   return (
     <div className="flex-grow md:grid md:grid-cols-2 md:grid-rows-2">
-      <div className="row-span-2 flex items-center justify-center border-r">
-        <section className="max-w-lg">
-          <ArrowCounterClockwiseIcon className="w-16 h-16 mb-4" />
-          <h1 className="font-bold text-3xl mb-4">Rotar Matriz</h1>
+      <div className="md:row-span-2 md:flex md:items-center md:justify-center md:border-r border-b md:border-b-0 p-6">
+        <section className="md:max-w-lg">
+          <header className="flex flex-col gap-2 md:gap-4 mb-4">
+            <ArrowCounterClockwiseIcon className="w-16 h-16" />
+            <h1 className="font-bold text-3xl">Rotar Matriz</h1>
+          </header>
           <p className="text-lg mb-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum autem
             laudantium sint quibusdam quasi aliquam nulla voluptatem obcaecati.

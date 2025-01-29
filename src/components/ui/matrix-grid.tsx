@@ -11,8 +11,13 @@ export const MatrixGrid: React.FC<MatrixGridProps> = ({
   className,
 }) => {
   return (
-    <div className={cn('flex items-center justify-center relative', className)}>
-      <div className="absolute left-10 top-8 flex items-center gap-2">
+    <div
+      className={cn(
+        'flex flex-col items-center justify-center relative p-6',
+        className,
+      )}
+    >
+      <div className="md:absolute md:left-6 md:top-6 flex items-center gap-2 mb-6 md:mb-0">
         {text && <p className="text-lg font-bold">{text}:</p>}
         {!!items?.length && (
           <pre>

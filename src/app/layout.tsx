@@ -5,7 +5,7 @@ import '@/app/globals.css';
 const baseFont = BaseFont({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '700'],
+  weight: ['400', '600', '700'],
 });
 
 export { baseFont };

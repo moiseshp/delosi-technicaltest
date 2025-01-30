@@ -6,49 +6,48 @@ import {
 } from '@/lib/matrix';
 import { Matrix } from '@/types/matrix';
 
-interface InputMatrixState {
+interface MatrixState {
   value: string;
   handleValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  inputMatrix: Matrix | null;
-  outputMatrix: Matrix | null;
+  input: Matrix | null;
+  output: Matrix | null;
   hasError: boolean;
 }
 
-export function useInputMatrix(): InputMatrixState {
+export function useMatrix(): MatrixState {
   const [value, setValue] = React.useState<string>('');
-  const [inputMatrix, setInputMatrix] = React.useState<Matrix | null>(null);
-  const [outputMatrix, setOutputMatrix] = React.useState<Matrix | null>(null);
+  const [input, setInput] = React.useState<Matrix | null>(null);
+  const [output, setOutput] = React.useState<Matrix | null>(null);
   const [hasError, setHasError] = React.useState(false);
   const debounceValue = useDebounce(value);
 
   const handleReset = () => {
-    setHasError(false);
-    setInputMatrix(null);
-    setOutputMatrix(null);
+    setInput(null);
+    setOutput(null);
   };
 
   React.useEffect(() => {
     if (!debounceValue) {
+      setHasError(false);
       handleReset();
       return;
     }
     if (isValidNxNMatrix(debounceValue)) {
       const matrix: Matrix = JSON.parse(debounceValue);
-      setInputMatrix(matrix);
-      setOutputMatrix(getRotateMatrixCounterClockwise(matrix));
+      setInput(matrix);
+      setOutput(getRotateMatrixCounterClockwise(matrix));
       setHasError(false);
     } else {
       setHasError(true);
-      setInputMatrix(null);
-      setOutputMatrix(null);
+      handleReset();
     }
   }, [debounceValue]);
 
   return {
     value,
     handleValue: (event) => setValue(event.target.value),
-    inputMatrix,
-    outputMatrix,
+    input,
+    output,
     hasError,
   };
 }

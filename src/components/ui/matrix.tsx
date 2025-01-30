@@ -48,18 +48,3 @@ export const MatrixGrid: React.FC<MatrixGridlProps> = ({ data, ...props }) => {
     </div>
   );
 };
-
-export const MatrixBox: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
-  className,
-  ...props
-}) => {
-  return (
-    <div
-      className={cn(
-        'p-6 lg:flex lg:items-center lg:justify-center lg:relative',
-        className,
-      )}
-      {...props}
-    />
-  );
-};

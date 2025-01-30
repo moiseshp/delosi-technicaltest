@@ -1,12 +1,11 @@
 'use client';
 import * as React from 'react';
-import { MatrixBox, MatrixGrid, MatrixLabel } from '@/components/ui/matrix';
-import { useInputMatrix } from '@/hooks/use-input-matrix';
+import { MatrixGrid, MatrixLabel } from '@/components/ui/matrix';
+import { useMatrix } from '@/hooks/use-matrix';
 import { TextField } from '@/components/ui/text-field';
 
 export const PageClient = () => {
-  const { value, handleValue, inputMatrix, outputMatrix, hasError } =
-    useInputMatrix();
+  const { value, handleValue, input, output, hasError } = useMatrix();
 
   return (
     <React.Fragment>
@@ -29,22 +28,22 @@ export const PageClient = () => {
           />
         </section>
       </div>
-      <MatrixBox className="lg:border-l border-b">
+      <div className="lg:border-l border-b p-6 lg:flex lg:items-center lg:justify-center lg:relative">
         <MatrixLabel
           label="Input:"
-          data={inputMatrix}
+          data={input}
           className="lg:absolute lg:left-6 lg:top-6"
         />
-        <MatrixGrid data={inputMatrix} />
-      </MatrixBox>
-      <MatrixBox className="lg:border-l border-b lg:border-b-0">
+        <MatrixGrid data={input} />
+      </div>
+      <div className="lg:border-l border-b lg:border-b-0 p-6 lg:flex lg:items-center lg:justify-center lg:relative">
         <MatrixLabel
           label="Output:"
-          data={outputMatrix}
+          data={output}
           className="lg:absolute lg:left-6 lg:top-6"
         />
-        <MatrixGrid data={outputMatrix} />
-      </MatrixBox>
+        <MatrixGrid data={output} />
+      </div>
     </React.Fragment>
   );
 };

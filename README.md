@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/screenshot.png" alt="Screenshot" />
+  <img src="public/images/screenshot.png" alt="Screenshot" />
 </div>
 
 # Delosi - Prueba Técnica

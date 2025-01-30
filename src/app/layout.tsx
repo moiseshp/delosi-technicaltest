@@ -8,8 +8,6 @@ const baseFont = BaseFont({
   weight: ['400', '600', '700'],
 });
 
-export { baseFont };
-
 export const metadata: Metadata = {
   title: 'Prueba Técnica - Delosi',
   description:

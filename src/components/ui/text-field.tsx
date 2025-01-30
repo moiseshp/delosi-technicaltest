@@ -12,6 +12,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
       className,
+      id,
       type = 'text',
       hasError = false,
       label,
@@ -25,12 +26,14 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
       <React.Fragment>
         {label && (
           <label
+            htmlFor={id}
             className={cn('text-lg font-semibold', hasError && 'text-red-500')}
           >
             {label}
           </label>
         )}
         <input
+          id={id}
           type={type}
           className={cn(
             'flex h-10 w-full rounded-md border border-input px-3 py-2 text-base focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
@@ -40,8 +43,16 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           ref={ref}
           {...props}
         />
-        {helperText && <div className="text-sm">{helperText}</div>}
-        {hasError && <p className="text-sm text-red-500">{errorText}</p>}
+        {helperText && (
+          <div className="text-sm" data-testid="input-helper">
+            {helperText}
+          </div>
+        )}
+        {hasError && (
+          <p className="text-sm text-red-500" data-testid="input-error">
+            {errorText}
+          </p>
+        )}
       </React.Fragment>
     );
   },

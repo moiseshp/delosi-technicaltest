@@ -27,7 +27,12 @@ interface MatrixGridlProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const MatrixGrid: React.FC<MatrixGridlProps> = ({ data, ...props }) => {
   if (!data) {
-    return <EmptyIcon className="w-44 h-44 fill-zinc-200" />;
+    return (
+      <EmptyIcon
+        title="matrix grid it is empty"
+        className="w-44 h-44 fill-zinc-200"
+      />
+    );
   }
 
   return (

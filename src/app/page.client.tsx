@@ -1,6 +1,8 @@
 'use client';
-import { GridDisplay, GridDisplayLabel } from '@/components/ui/grid-display';
+import { MatrixView } from '@/components/ui/matrix-view';
+import { MatrixLabel } from '@/components/ui/matrix-label';
 import * as React from 'react';
+import { Input } from '@/components/ui/input';
 
 export const PageClient = () => {
   return (
@@ -14,14 +16,9 @@ export const PageClient = () => {
           >
             Campo de entrada:
           </label>
-          <input
-            type="text"
-            id="input-matrix"
-            name="matrix"
-            aria-labelledby="matrix-label"
-            aria-describedby="matrix-help"
+          <Input
             placeholder="Ingresa aquí un arreglo..."
-            className="w-full border border-black rounded-md px-4 text-2xl focus:border-none font-semibold tracking-widest h-14 leading-10 placeholder:text-xl placeholder:font-normal"
+            className="h-12 font-semibold tracking-widest"
           />
           <p id="matrix-help">
             Por ejemplo:
@@ -33,7 +30,7 @@ export const PageClient = () => {
         </section>
       </div>
       <div className="lg:border-l border-b p-6 lg:flex lg:items-center lg:justify-center lg:relative">
-        <GridDisplayLabel
+        <MatrixLabel
           className="lg:absolute lg:left-6 lg:top-6"
           label="Input:"
           data={[
@@ -42,7 +39,7 @@ export const PageClient = () => {
             [7, 8, 9],
           ]}
         />
-        <GridDisplay
+        <MatrixView
           data={[
             [1, 2, 3],
             [4, 5, 6],
@@ -51,7 +48,7 @@ export const PageClient = () => {
         />
       </div>
       <div className="lg:border-l border-b p-6 lg:flex lg:items-center lg:justify-center lg:relative">
-        <GridDisplayLabel
+        <MatrixLabel
           className="lg:absolute lg:left-6 lg:top-6"
           label="Output:"
           data={[
@@ -60,7 +57,7 @@ export const PageClient = () => {
             [7, 8, 9],
           ]}
         />
-        <GridDisplay
+        <MatrixView
           data={[
             [1, 2, 3],
             [4, 5, 6],

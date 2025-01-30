@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ArrowCounterClockwiseIcon } from '@/components/icons/arrow-counter-clockwise';
-import { AppCredits } from '@/components/ui/app-credits';
 import { PageClient } from '@/app/page.client';
 
 export default function Home() {
@@ -22,7 +21,15 @@ export default function Home() {
         <PageClient />
       </main>
       <footer className="py-4 px-6 text-xs lg:absolute lg:bottom-0 lg:left-0">
-        <AppCredits />
+        2025 &copy; Creado por
+        <a
+          href="https://moiseshp.dev"
+          target="_blank"
+          title="Ir a página de moiseshp"
+          className="ml-1"
+        >
+          <strong>moiseshp</strong>
+        </a>
       </footer>
     </React.Fragment>
   );

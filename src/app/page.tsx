@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ArrowCounterClockwiseIcon } from '@/components/icons/arrow-counter-clockwise';
 import { AppCredits } from '@/components/ui/app-credits';
-import { PageClient } from './page.client';
+import { PageClient } from '@/app/page.client';
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <PageClient />
       </main>
-      <footer className="py-3 px-6 text-xs lg:text-center">
+      <footer className="py-4 px-6 text-xs lg:absolute lg:bottom-0 lg:left-0">
         <AppCredits />
       </footer>
     </React.Fragment>

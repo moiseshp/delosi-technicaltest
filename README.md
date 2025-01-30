@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="public/screenshot.png" alt="Screenshot" />
+</div>
+
 # Delosi - Prueba Técnica
 
 ## Descripción

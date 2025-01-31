@@ -9,7 +9,10 @@ export default function Home() {
         <div className="lg:flex lg:justify-center lg:items-end">
           <section className="lg:max-w-lg flex flex-col gap-6 p-6 lg:p-0">
             <header className="flex flex-col gap-2 lg:gap-4">
-              <ArrowCounterClockwiseIcon className="w-16 h-16" />
+              <ArrowCounterClockwiseIcon
+                className="w-16 h-16"
+                title="rotate icon"
+              />
               <h1 className="font-bold text-3xl">Rotar Matriz</h1>
             </header>
             <p className="text-lg">

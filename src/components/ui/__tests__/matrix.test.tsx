@@ -23,7 +23,7 @@ describe('MatrixGrid', () => {
     render(<MatrixGrid data={null} />);
 
     expect(screen.queryByRole('table')).not.toBeInTheDocument();
-    expect(screen.getByTitle(/matrix grid it is empty/i)).toBeInTheDocument();
+    expect(screen.getByTitle(/empty icon by matrix grid/i)).toBeInTheDocument();
   });
 });
 

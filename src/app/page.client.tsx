@@ -13,6 +13,7 @@ export const PageClient = () => {
         <section className="lg:max-w-lg p-6 pt-0 lg:p-0 lg:pt-6 flex flex-col gap-2 flex-1">
           <TextField
             label="Campo de entrada"
+            id="input-matrix"
             helperText={
               <>
                 Por ejemplo:

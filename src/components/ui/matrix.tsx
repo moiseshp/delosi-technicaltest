@@ -29,7 +29,7 @@ export const MatrixGrid: React.FC<MatrixGridlProps> = ({ data, ...props }) => {
   if (!data) {
     return (
       <EmptyIcon
-        title="matrix grid it is empty"
+        title="empty icon by matrix grid"
         className="w-44 h-44 fill-zinc-200"
       />
     );

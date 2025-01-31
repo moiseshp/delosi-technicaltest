@@ -13,7 +13,7 @@ export default function Home() {
                 className="w-16 h-16"
                 title="rotate icon"
               />
-              <h1 className="font-bold text-3xl">Rotar Matriz</h1>
+              <h1 className="font-bold text-3xl lg:text-5xl">Rotar Matriz</h1>
             </header>
             <p className="text-lg">
               Ingresa, en el campo de entrada, un arreglo de arreglos de números

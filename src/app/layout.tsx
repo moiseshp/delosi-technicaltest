@@ -9,9 +9,9 @@ const baseFont = BaseFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Prueba Técnica - Delosi',
+  title: 'Rotar Matriz - Prueba Técnica (Delosi)',
   description:
-    'Implementación de Prueba Técnica que permite Rotar una Matriz en sentido anti-horario',
+    'Implementación de Prueba Técnica que permite Rotar una Matriz 90 grados en sentido anti-horario',
 };
 
 export default function RootLayout({

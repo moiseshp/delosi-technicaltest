@@ -26,8 +26,14 @@ export function useMatrix(): MatrixState {
     setOutput(null);
   };
 
+  const handleValue = React.useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) =>
+      setValue(event.target.value),
+    [],
+  );
+
   React.useEffect(() => {
-    if (!debounceValue) {
+    if (!debounceValue.trim()) {
       setHasError(false);
       handleReset();
       return;
@@ -45,7 +51,7 @@ export function useMatrix(): MatrixState {
 
   return {
     value,
-    handleValue: (event) => setValue(event.target.value),
+    handleValue,
     input,
     output,
     hasError,

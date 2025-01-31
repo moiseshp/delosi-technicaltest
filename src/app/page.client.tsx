@@ -31,19 +31,19 @@ export const PageClient = () => {
       </div>
       <div className="lg:border-l border-b p-6 lg:flex lg:items-center lg:justify-center lg:relative">
         <MatrixLabel
-          label="Input:"
+          label="Input"
           data={input}
           className="lg:absolute lg:left-6 lg:top-6"
         />
-        <MatrixGrid data={input} />
+        <MatrixGrid data={input} data-testid="matrix-grid-input" />
       </div>
       <div className="lg:border-l border-b lg:border-b-0 p-6 lg:flex lg:items-center lg:justify-center lg:relative">
         <MatrixLabel
-          label="Output:"
+          label="Output"
           data={output}
           className="lg:absolute lg:left-6 lg:top-6"
         />
-        <MatrixGrid data={output} />
+        <MatrixGrid data={output} data-testid="matrix-grid-output" />
       </div>
     </React.Fragment>
   );

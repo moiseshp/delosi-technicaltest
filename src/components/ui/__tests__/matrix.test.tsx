@@ -23,7 +23,7 @@ describe('MatrixGrid', () => {
     render(<MatrixGrid data={null} />);
 
     expect(screen.queryByRole('table')).not.toBeInTheDocument();
-    expect(screen.getByTitle(/empty icon by matrix grid/i)).toBeInTheDocument();
+    expect(screen.getByTitle(/empty matrix grid/i)).toBeInTheDocument();
   });
 });
 
@@ -33,9 +33,8 @@ describe('MatrixLabel', () => {
       [1, 2],
       [3, 4],
     ];
-    render(<MatrixLabel label="label text" data={data} />);
+    render(<MatrixLabel label="My Label" data={data} />);
 
-    expect(screen.getByText(/label text/i)).toBeInTheDocument();
-    expect(screen.getByText('[[1,2],[3,4]]')).toBeInTheDocument();
+    expect(screen.getByText('My Label: [[1,2],[3,4]]')).toBeInTheDocument();
   });
 });

@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Home from '@/app/page';
+import Page from '@/app/page';
 
-describe('Home (server component)', () => {
+describe('Page (server component)', () => {
   it('render page', async () => {
-    render(Home());
+    render(Page());
 
     expect(screen.getByTitle(/rotate icon/i)).toBeInTheDocument();
     expect(
@@ -22,6 +22,6 @@ describe('Home (server component)', () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/input/i)).toBeInTheDocument();
     expect(screen.getByText(/output/i)).toBeInTheDocument();
-    expect(screen.getAllByTitle(/empty icon by matrix grid/i)).toHaveLength(2);
+    expect(screen.getAllByTitle(/empty matrix grid/i)).toHaveLength(2);
   });
 });

@@ -25,9 +25,9 @@ describe('TextField', () => {
   it('should update input value when user types', async () => {
     render(<TextField placeholder="type something" />);
 
-    const input = screen.getByPlaceholderText(/type something/i);
-    await userEvent.type(input, 'my example text');
+    const textField = screen.getByPlaceholderText(/type something/i);
+    await userEvent.type(textField, 'my example text');
 
-    expect(input).toHaveValue('my example text');
+    expect(textField).toHaveValue('my example text');
   });
 });

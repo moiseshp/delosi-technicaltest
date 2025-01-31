@@ -38,6 +38,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
         <input
           id={id}
           type={type}
+          data-testid={id}
           className={cn(
             'flex h-10 w-full rounded-md border-2 border-black px-3 py-2 text-base focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
             hasError && 'border-red-500',

@@ -14,10 +14,12 @@ export const MatrixLabel: React.FC<MatrixLabelProps> = ({
   ...props
 }) => {
   return (
-    <p className={cn('md:text-lg font-bold mb-6', className)} {...props}>
-      {label}
-      <code className="ml-3">{JSON.stringify(data || [])}</code>
-    </p>
+    <h3
+      className={cn('md:text-lg font-bold mb-6 tracking-widest', className)}
+      {...props}
+    >
+      {label}: {JSON.stringify(data || [])}
+    </h3>
   );
 };
 
@@ -29,7 +31,7 @@ export const MatrixGrid: React.FC<MatrixGridlProps> = ({ data, ...props }) => {
   if (!data) {
     return (
       <EmptyIcon
-        title="empty icon by matrix grid"
+        title="empty matrix grid"
         className="w-44 h-44 fill-zinc-200"
       />
     );

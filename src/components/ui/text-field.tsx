@@ -27,7 +27,10 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
         {label && (
           <label
             htmlFor={id}
-            className={cn('text-lg font-semibold', hasError && 'text-red-500')}
+            className={cn(
+              'text-lg font-semibold block mb-2',
+              hasError && 'text-red-500',
+            )}
           >
             {label}
           </label>
@@ -44,12 +47,12 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           {...props}
         />
         {helperText && (
-          <div className="text-sm" data-testid="input-helper">
+          <div className="text-sm mt-4" data-testid="input-helper">
             {helperText}
           </div>
         )}
         {hasError && (
-          <p className="text-sm text-red-500" data-testid="input-error">
+          <p className="text-sm text-red-500 mt-4" data-testid="input-error">
             {errorText}
           </p>
         )}

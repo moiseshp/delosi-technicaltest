@@ -10,7 +10,7 @@ export const PageClient = () => {
   return (
     <React.Fragment>
       <div className="lg:col-start-1 lg:row-start-2 lg:flex lg:justify-center border-b lg:border-b-0">
-        <section className="lg:max-w-lg p-6 pt-0 lg:p-0 lg:pt-6 flex flex-col gap-2 flex-1">
+        <section className="lg:max-w-lg p-6 pt-0 lg:p-0 lg:pt-6 flex-1">
           <TextField
             label="Campo de entrada"
             id="input-matrix"
@@ -20,7 +20,7 @@ export const PageClient = () => {
                 <span className="ml-1 tracking-[0.15em]">[[1,2],[3,4]]</span>
               </>
             }
-            errorText="(*) Revisa que el valor ingresado sea un arreglo válido de tipo NxN"
+            errorText="(*) El valor ingresado no es un arreglo válido"
             placeholder="Ingresa aquí un arreglo..."
             className="h-12 font-semibold tracking-widest"
             hasError={hasError}
